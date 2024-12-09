@@ -1,0 +1,14 @@
+/home/casper/Документы/Codes/BossFight/bin/Release/net9.0/BossFight
+/home/casper/Документы/Codes/BossFight/bin/Release/net9.0/BossFight.deps.json
+/home/casper/Документы/Codes/BossFight/bin/Release/net9.0/BossFight.runtimeconfig.json
+/home/casper/Документы/Codes/BossFight/bin/Release/net9.0/BossFight.dll
+/home/casper/Документы/Codes/BossFight/bin/Release/net9.0/BossFight.pdb
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.GeneratedMSBuildEditorConfig.editorconfig
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.AssemblyInfoInputs.cache
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.AssemblyInfo.cs
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.csproj.CoreCompileInputs.cache
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.dll
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/refint/BossFight.dll
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.pdb
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/BossFight.genruntimeconfig.cache
+/home/casper/Документы/Codes/BossFight/obj/Release/net9.0/ref/BossFight.dll
