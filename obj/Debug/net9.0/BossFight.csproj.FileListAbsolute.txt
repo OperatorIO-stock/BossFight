@@ -1,0 +1,15 @@
+/home/operatorio/Документы/meCodes/BossFight/BossFight/bin/Debug/net9.0/BossFight
+/home/operatorio/Документы/meCodes/BossFight/BossFight/bin/Debug/net9.0/BossFight.deps.json
+/home/operatorio/Документы/meCodes/BossFight/BossFight/bin/Debug/net9.0/BossFight.runtimeconfig.json
+/home/operatorio/Документы/meCodes/BossFight/BossFight/bin/Debug/net9.0/BossFight.dll
+/home/operatorio/Документы/meCodes/BossFight/BossFight/bin/Debug/net9.0/BossFight.pdb
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.GeneratedMSBuildEditorConfig.editorconfig
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.AssemblyInfoInputs.cache
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.AssemblyInfo.cs
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.csproj.CoreCompileInputs.cache
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.sourcelink.json
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.dll
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/refint/BossFight.dll
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.pdb
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/BossFight.genruntimeconfig.cache
+/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/Debug/net9.0/ref/BossFight.dll

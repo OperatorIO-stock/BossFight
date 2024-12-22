@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/home/casper/.nuget/packages/": {}
+    "/home/operatorio/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/casper/Документы/Codes/BossFight/BossFight.csproj",
+      "projectUniqueName": "/home/operatorio/Документы/meCodes/BossFight/BossFight/BossFight.csproj",
       "projectName": "BossFight",
-      "projectPath": "/home/casper/Документы/Codes/BossFight/BossFight.csproj",
-      "packagesPath": "/home/casper/.nuget/packages/",
-      "outputPath": "/home/casper/Документы/Codes/BossFight/obj/",
+      "projectPath": "/home/operatorio/Документы/meCodes/BossFight/BossFight/BossFight.csproj",
+      "packagesPath": "/home/operatorio/.nuget/packages/",
+      "outputPath": "/home/operatorio/Документы/meCodes/BossFight/BossFight/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/casper/.nuget/NuGet/NuGet.Config"
+        "/home/operatorio/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.100-rc.2.24474.1/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

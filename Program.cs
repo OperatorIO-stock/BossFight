@@ -9,7 +9,6 @@ class Program
         const string CommandAttackBlast = "B";
         const string CommandHelingPlayer = "H";
 
-        //Характеристики игрока
         int playerHealth = 100;
         int playerMana = 100;
         int playerMaxHealth = 100;
@@ -20,17 +19,15 @@ class Program
         int playerDamageBlast = 80;
         int healingAttempts = 3;
 
-        //Лечение и пополнения маны
         int healingHealth = 50;
         int healingMana = 25;
 
-        //Стоимость использования способностей 
         int costUseManaFireBall = 15;
         int costUseManaBlast = 25;
 
-        //Характеристики босса
         int bossHealth = 500;
         int bossMaxHealth = 500;
+        int bossMinHealth = 0;
         int bossBaseDamageLower = 10;
         int bossBaseDamageUpper = 25;
 
@@ -52,7 +49,7 @@ class Program
         Console.WriteLine($"Доступные действия:\nБазовая атака - {CommandBaseAttack}\nОгненный шар - {CommandAttackFireBall}\n" + 
                                 $"Ультимейт - {CommandAttackBlast}\nИсцеление - {CommandHelingPlayer}");
 
-        while (playerHealth > 0 || bossHealth > 0)
+        while (playerHealth > 0 && bossHealth > 0)
         {
             Random random = new Random();
             int bossBaseAttack = random.Next(bossBaseDamageLower, bossBaseDamageUpper);
@@ -85,7 +82,7 @@ class Program
                     break;
 
                 case CommandAttackBlast:
-                    if (!isUsingUltimate)
+                    if (isUsingUltimate == false)
                     {
                         Console.WriteLine("\nСначала ты должен использовать навык <<AttackFireBall>>");
                         break;
@@ -109,23 +106,20 @@ class Program
                 case CommandHelingPlayer:
                     if (healingAttempts > 0)
                     {
-                        for (int i = 0; i <= healingAttempts;)
-                        {
-                            playerHealth += healingHealth;
+                        playerHealth += healingHealth;
 
-                            if (playerHealth > playerMaxHealth)
-                                playerHealth = playerMaxHealth;
+                        if (playerHealth > playerMaxHealth)
+                            playerHealth = playerMaxHealth;
 
-                            playerMana += healingMana;
+                        playerMana += healingMana;
 
-                            if(playerMana > playerMaxMana)
-                                playerMana = playerMaxMana;
+                        if(playerMana > playerMaxMana)
+                            playerMana = playerMaxMana;
 
-                            healingAttempts--;
+                        healingAttempts--;
 
-                            Console.WriteLine($"Вы использовали исцеления!\nОсталось попыток: {healingAttempts}");
-                            break;
-                        }
+                        Console.WriteLine($"Вы использовали исцеления!\nОсталось попыток: {healingAttempts}");
+                        break;
                     }
                     else
                     {
@@ -142,50 +136,52 @@ class Program
                     
                     playerHealth -= bossBaseAttack;
 
-                    if (playerHealth <= 0)
-                        playerHealth = playerMinHealth;
-
                     isPlayerMadeHit = false;
                     break;
             }
 
-            if (isPlayerMadeHit)
+            if (isPlayerMadeHit == true)
             {
                 Console.WriteLine("\nТеперь удар делает Душа Пепла");
                 Thread.Sleep(3000);
 
                 playerHealth -= bossBaseAttack;
 
-                if (playerHealth <= 0)
-                    playerHealth = playerMinHealth;
             }
 
-            if (playerHealth <= 0 && bossHealth > 0)
+            if (playerHealth <= 0)
             {
-                Console.WriteLine("\nВы проиграли эту битву!");
-                Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
-                                $"Boss Health: {bossHealth}/{bossMaxHealth}");
-                break;
+                playerHealth = playerMinHealth;
             }
-            else if (bossHealth <= 0 && playerHealth > 0)
+
+            if (bossHealth <= 0)
             {
-                Console.WriteLine("\nВы оказались сильнее и победили эту битву!");
-                Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
-                                $"Boss Health: {bossHealth}/{bossMaxHealth}");
-                break;
-            }
-            else if (bossHealth <= 0 && playerHealth <= 0)
-            {
-                Console.WriteLine("\nНичья!");
-                Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
-                                $"Boss Health: {bossHealth}/{bossMaxHealth}");
-                break;
+                bossHealth = bossMinHealth;
             }
 
             Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
                                 $"Boss Health: {bossHealth}/{bossMaxHealth}");
             Console.WriteLine("\nСледующий удар за вами!\n" + $"Доступные действия:\nБазовая атака - {CommandBaseAttack}\nОгненный шар - {CommandAttackFireBall}\n" + 
                                 $"Ультимейт - {CommandAttackBlast}\nИсцеление - {CommandHelingPlayer}");
+        }
+
+        if (playerHealth <= 0 && bossHealth > 0)
+        {
+            Console.WriteLine("\nВы проиграли эту битву!");
+            Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
+                                $"Boss Health: {bossHealth}/{bossMaxHealth}");
+        }
+        else if (bossHealth <= 0 && playerHealth > 0)
+        {
+            Console.WriteLine("\nВы оказались сильнее и победили эту битву!");
+            Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
+                                $"Boss Health: {bossHealth}/{bossMaxHealth}");
+        }
+        else if (bossHealth <= 0 && playerHealth <= 0)
+        {
+            Console.WriteLine("\nНичья!");
+            Console.WriteLine($"\nPlayer Health and Mana: {playerHealth}/{playerMaxHealth} || {playerMana}/{playerMaxMana}\n" +
+                                $"Boss Health: {bossHealth}/{bossMaxHealth}");
         }
     }
 }
